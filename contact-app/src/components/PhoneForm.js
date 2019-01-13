@@ -13,7 +13,10 @@ const styles = theme => ({
       marginLeft: theme.spacing.unit,
       marginRight: theme.spacing.unit,
       width: 200,
-    }
+    },
+    button: {
+      margin: '23px 15px',
+    },
   });
 
 class PhoneForm extends Component {
@@ -51,7 +54,8 @@ class PhoneForm extends Component {
                     className={classes.textField}
                     onChange={this.handleChange} 
                     value={this.state.name}
-                    ref={this.input}
+                    inputRef={this.input}
+                    /* textField에서는 ref속성 대신에 inputRef를 사용한다.*/
                     margin="normal"
                     autoComplete="off"
                 />
@@ -65,7 +69,7 @@ class PhoneForm extends Component {
                     margin="normal"
                     autoComplete="off"
                 />
-                <Button variant="contained" color="primary" type="submit">등록</Button>
+                <Button className={classes.button} variant="contained" color="primary" type="submit">등록</Button>
             </form>
         );
     }
