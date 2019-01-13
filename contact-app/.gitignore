@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#debugger for chrome 관련 설정
+/.vscode/launch.json
